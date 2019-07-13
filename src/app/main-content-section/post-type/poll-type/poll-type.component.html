@@ -1,0 +1,9 @@
+<div class="postType">
+  <div class="pollQuestion">{{ postPollType.pollQuestion }}</div>
+  <div class="pollAnswerSet">
+    <div class="pollAnswer" *ngFor="let polls of postPollType.pollAnswer">
+      <input type="radio" name="poll"/><span>{{ polls.option }}</span>  <span [ngClass]="{active: shanky == 2}">{{ polls.count }}</span>
+    </div>
+  </div>
+</div>
+<app-post-likes [likesCountList]="postPollType"></app-post-likes>

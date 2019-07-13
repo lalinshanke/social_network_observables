@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-login></app-login>
+<div class="mainWrapper">
+  <app-header-section></app-header-section>
+  <div class="contentGroup">
+    <app-left-section class="leftSection"></app-left-section>
+    <app-main-content-section class="contentSection" [dataList]="getData"></app-main-content-section>
+    <app-right-section class="rightSection"></app-right-section>
+    <div class="test">{{title}}</div>
+    <button (click)="myObservableFunction()">Check</button>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

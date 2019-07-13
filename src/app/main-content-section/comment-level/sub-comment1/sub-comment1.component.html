@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let postMess of subComment1.postComments">
+      <div class="replyUserPicandMessageSet">
+        <div class="replyUserPic"><img src="{{postMess.commentUserPic}}"></div>
+        <div class="replyUserMessage">{{postMess.Comment}}</div>
+      </div>
+      <app-sub-comment2 [subComment2]="postMess"></app-sub-comment2>
+    </li>
+  </ul>

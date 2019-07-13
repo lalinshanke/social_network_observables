@@ -1,0 +1,8 @@
+<div *ngFor="let userList of dataList">
+  <div class="postInfoSet">
+    <app-post-header [postHeader]="userList"></app-post-header>
+    <app-post-type [postType]="userList"></app-post-type>
+    <app-comment-leve1 [postComment]="userList"></app-comment-leve1>
+    <input class="postComment" placeholder="Type your comment" />
+  </div>
+</div>

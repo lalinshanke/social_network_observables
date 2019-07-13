@@ -1,0 +1,18 @@
+<ul>
+    <li *ngFor="let postMessReply of subComment2.reply">
+      <div class="replyUserPicandMessageSet">
+        <div class="replyUserPic"><img src="{{postMessReply.replyUserPhoto}}"></div>
+        <div class="replyUserMessage"><span class="replyNameBold">{{postMessReply.replyUserName}} </span> {{postMessReply.replyUser}} </div>
+      </div>
+      <ul *ngIf="postMessReply.secondLevelReply?.length > 0">
+          <li *ngFor="let secondPostMessReply of postMessReply.secondLevelReply">
+            <div class="replyUserPicandMessageSet">
+              <div class="replyUserPic"><img src="{{secondPostMessReply.secondReplyUserPhoto}}"></div>
+              <div class="replyUserMessage"><span class="replyNameBold">{{secondPostMessReply.secondReplyUserName}} </span> {{postMessReply.replyUser}}</div>
+            </div>
+          </li>
+          <input class="postComment" placeholder="Type your comment" />
+        </ul>
+    </li>
+    <input class="postComment" placeholder="Type your comment" />
+  </ul>
