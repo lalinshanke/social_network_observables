@@ -9,7 +9,7 @@ import { PostFirebaseService } from './../services/post-firebase.service';
 
 
 export class RightSectionComponent implements OnInit {
-
+  title = "";
  test = 1;
  addTest: string;
  twoWay:any;
@@ -17,7 +17,11 @@ export class RightSectionComponent implements OnInit {
 
 
 
-  constructor( private  postFirebaseService: PostFirebaseService ) { }
+  constructor( private  postFirebaseService: PostFirebaseService ) {
+    this.postFirebaseService.commonObservable.subscribe((v: string) => {
+      this.title = v;
+    });
+   }
 
   ngOnInit() {
   }
